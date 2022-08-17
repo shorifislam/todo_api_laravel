@@ -17,17 +17,13 @@ class TodoController extends Controller
     {
         $todo = Todo::all();
 
-        if(!is_null($todo))
-        {
+        if (!is_null($todo)) {
             return response()->json([
                 'todos' => $todo,
                 'success' => true,
                 'error' => null
             ]);
-
         }
-
-      
     }
 
     /**
@@ -56,14 +52,12 @@ class TodoController extends Controller
     {
         $todo = Todo::find($id);
 
-        if(!is_null($todo))
-        {
+        if (!is_null($todo)) {
             return response()->json([
-                'todos' => $todo,
+                'todo' => $todo,
                 'success' => true,
                 'error' => null
             ]);
-
         }
     }
 
