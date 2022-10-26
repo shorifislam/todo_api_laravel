@@ -23,6 +23,10 @@ class TodoController extends Controller
                 'success' => true,
                 'error' => null
             ]);
+
+        }else{
+
+
         }
     }
 
@@ -57,6 +61,12 @@ class TodoController extends Controller
                 'todo' => $todo,
                 'success' => true,
                 'error' => null
+            ]);
+        }else{
+            return response()->json([
+                'todo' => $todo,
+                'success' => false,
+                'error' => 'No records Found'
             ]);
         }
     }
